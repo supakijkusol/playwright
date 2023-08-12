@@ -1,0 +1,17 @@
+dir to directory D:\Work\Automation_Test\Playwright\training\tests
+== headless mode (not show screen) ==
+npx playwright test .\example.spec.js
+
+== head mode (show screen) ==
+npx playwright test --headed                        // run all script in folder
+npx playwright test .\example.spec.js --headed      // run this script in folder
+
+== debug mode ==
+npx playwright test .\example.spec.js --debug
+npx playwright test .\example.spec.js:11 --debug    // debug start at code line 11
+
+== view report ==
+1. notes : View HTML report at http://localhost:9323
+    - Head mode
+    - Trace 
+2. command : npx playwright show-report
