@@ -10,6 +10,8 @@ Check Version
     - node -v
 - check npm version
 	- npm --version
+- check Playwright version
+    - npm playwright -v
 
 Install / Update nodejs and npm version
 
@@ -17,6 +19,12 @@ Install / Update nodejs and npm version
 	- https://nodejs.org/en/download
 - click Windows Installer for download nodejs and npm latest version
 	- ex. file "node-v18.17.1-x64.msi"
+- install Playwright
+    - npm init playwright@latest
+        - select JavaScript
+        - create end-to-end test = "tests"
+        - add a GitHub Actions workflow = "true"
+        - install Playwright browser = "true"
 
 Extensions
 
