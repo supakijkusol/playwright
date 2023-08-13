@@ -67,3 +67,5 @@ Step to execution test on local
             - Head mode
             - Trace 
         - command : npx playwright show-report
+4. Code Generate
+    - npx playwright codegen
