@@ -25,6 +25,8 @@ Install / Update nodejs and npm version
         - create end-to-end test = "tests"
         - add a GitHub Actions workflow = "true"
         - install Playwright browser = "true"
+- install Codegen
+    - npx playwright codegen
 
 Extensions
 
