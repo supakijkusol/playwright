@@ -10,15 +10,22 @@ import { test, expect } from '@playwright/test';
 
 
 test('YouTube - Search and open Bodyslam playlist', async ({ page }) => {
+  // open YouTube web site
   await page.goto('https://www.youtube.com/');
+  // search by text
   await page.getByPlaceholder('Search').click();
   await page.getByPlaceholder('Search').fill('BodySlam');
-  // await(3000)
+  // click button Search
+  await(3000)   // wait for button "Search" visible on page
   await page.getByRole('button', { name: 'Search', exact: true }).click();
-  // await(5000)
-  // await page.pause()
-  // /ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/div/div[3]/yt-formatted-string
-  await page.locator('xpath=//ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]').click();
+  // click first link for view VDO 
+  // await page.pause()   // pause executing 
+  /**
+   * ===== Xpath ===== 
+   * /ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/div/div[3]/yt-formatted-string
+   * ===============
+   */
+  await page.locator('xpath=//ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]');
   await page.locator('xpath=//ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]').click();
   await page.locator('xpath=//ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/div').click();
 });
