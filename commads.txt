@@ -1,0 +1,17 @@
+=== Web Application ===
+dir to directory path of test
+    - ex. script D:\Work\Automation_Test\Playwright\training\tests\e2e
+commands:
+npx playwright test ex-code-gen-1.spec.js
+npx playwright test example.spec.js
+npx playwright test my-first-test-1.spec.js
+npx playwright test my-first-test-2.spec.js
+
+
+== APIs ==
+dir to directory path of test
+    - ex. script D:\Work\Automation_Test\Playwright\training\tests\api
+commands:
+npx playwright test api-request-context.spec.js
+npx playwright test api-request-context.spec.js --ui        // show playwright UI for APIs testing
+

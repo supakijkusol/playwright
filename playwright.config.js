@@ -11,8 +11,9 @@ const { defineConfig, devices } = require('@playwright/test');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  /* Run all test scripts in folder "tests" */
+  /* Run with mode "TEST EXPLORER", Run all test scripts in folder "tests" */
   testDir: './tests',
+  // testDir: 'training',
   /* Maximum time one test can run for */
   timeout: 50 * 1000,
   /* Run tests in files in parallel */

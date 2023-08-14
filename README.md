@@ -53,19 +53,25 @@ Step to execution test on local
 
 1. open Visual Studio Code
 2. go to menu Terminal >> New Terminal
-3. dir to directory D:\Work\Automation_Test\Playwright\training\tests
+3. dir to directory path of test
+    - ex. script D:\Work\Automation_Test\Playwright\training\tests\e2e
+    - ex. script D:\Work\Automation_Test\Playwright\training\tests\api
 3. run test script
     - headless mode (not show screen)
-        - command : npx playwright test .\example.spec.js
+        - command : npx playwright test "script name"
+            - npx playwright test example.spec.js
     - head mode (show screen)
-        - command : npx playwright test --headed                        // run all script in folder
-        - command : npx playwright test .\example.spec.js --headed      // run this script in folder
+        - command : npx playwright test --headed                    // run all script in folder
+        - command : npx playwright test "script name" --headed      // run this script in folder
+            - npx playwright test example.spec.js --headed
     - debug mode
-        - command : npx playwright test .\example.spec.js --debug
-        - command : npx playwright test .\example.spec.js:11 --debug    // debug start at code line 11
+        - command : npx playwright test "script name" --debug
+            - npx playwright test example.spec.js --debug
+        - command : npx playwright test "script name":"line no" --debug    // debug start at code line 11
+            - npx playwright test example.spec.js:11 --debug
     - view report : View HTML report at http://localhost:9323
             - Head mode
             - Trace 
         - command : npx playwright show-report
-4. Code Generate
+4. Code Generate (Recording and generate code)
     - npx playwright codegen
