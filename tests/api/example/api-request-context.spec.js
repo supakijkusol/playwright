@@ -9,9 +9,9 @@ test.describe('Public APIs',() => {
         // console.log('response = ', response);                                       // view API response short info
         const responseBody = JSON.parse(await response.body());                     // parse response to JSON
         // console.log('response body = ',responseBody)                                // view API response body
-        console.log('total data in response body = ',responseBody.count)            // view total data in response body
-        console.log('response body array 1 = ',responseBody.entries[0])             // view API response body array 1
-        console.log('=== check all parameters in API response body array 1 ===')
+        await console.log('total data in response body = ',responseBody.count)            // view total data in response body
+        await console.log('response body array 1 = ',responseBody.entries[0])             // view API response body array 1
+        await console.log('=== check all parameters in API response body array 1 ===')
         // "entries" is title name of API response body
         expect(responseBody.entries[0].API).toEqual('AdoptAPet')                                                // check value of parameter "API"
         expect(responseBody.entries[0].Description).toEqual('Resource to help get pets adopted')                // check value of parameter "Description"

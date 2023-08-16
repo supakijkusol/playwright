@@ -10,7 +10,7 @@ npx playwright test my-first-test-2.spec.js
 
 == APIs ==
 dir to directory path of test
-    - ex. script D:\Work\Automation_Test\Playwright\training\tests\api
+    - ex. script D:\Work\Automation_Test\Playwright\training\tests\api\example
 commands:
 npx playwright test api-request-context.spec.js
 npx playwright test api-request-context.spec.js --ui        // show playwright UI for APIs testing
