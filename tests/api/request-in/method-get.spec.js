@@ -1,12 +1,12 @@
 import { test, expect } from "@playwright/test";
 
-test.describe('Test API - Reqres.in',() => {
+test.describe('Test API - Method GET - Reqres.in',() => {
     const baseURL = 'https://reqres.in/api'
 
     test('GET method',async ({request}) => {
         console.log("======= GET : Request API ========")
         const response = await request.get(`${baseURL}/user/2`)
-        expect(response.status()).toBe(200)
+        expect(response.status()).toEqual(200)
         console.log("======= JSON Response Body ========")
         const responseBody = JSON.parse(await response.body())
         // const responseBody = JSON.parse(await response.text())
