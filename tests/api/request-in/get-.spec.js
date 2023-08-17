@@ -4,10 +4,14 @@ test.describe('Test API - Reqres.in',() => {
     const baseURL = 'https://reqres.in/api'
 
     test('GET method',async ({request}) => {
+        console.log("======= GET : Request API ========")
         const response = await request.get(`${baseURL}/user/2`)
         expect(response.status()).toBe(200)
+        console.log("======= JSON Response Body ========")
         const responseBody = JSON.parse(await response.body())
+        // const responseBody = JSON.parse(await response.text())
         console.log("responseBody = ",responseBody)
+        console.log("======= Response Body ========")
         console.log("data.id = ",responseBody.data.id)
         console.log("data.name = ",responseBody.data.name)
         console.log("data.year = ",responseBody.data.year)
